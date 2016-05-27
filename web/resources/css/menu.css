@@ -1,0 +1,101 @@
+/*
+This css is used to change the FooGames menu
+*/
+/* 
+    Created on : Mar 28, 2016, 7:19:32 PM
+    Author     : vini
+*/
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+body { 
+    margin-top: 10%;
+    padding-top: 20px; 
+}
+@media screen and (min-width:768px) and (max-width:990px) {
+  body {
+    margin-top:200px;
+  }
+}
+@media screen and (min-width:991px) and (max-width:1200px) {
+  body {
+    margin-top:170px;
+  }
+}
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+    
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+}
+
+/* TWEAKS
+-------------------------------------------------- */
+/*Muda efeito do dropdown para hover ao inves clique*/
+/* .dropdown:hover .dropdown-menu {
+display: block;
+ }
+ */
+ /*Ajustes de largura do search*/
+ 
+  #search{
+      width: 100%;
+  }
+  #searchInput{
+      width: 100%;
+  }
+
+  /*Ajuste tamanho Navbar*/
+#bigNavbarContainer{
+    width: 70%;
+}
+
+/* Ajusta espaçamento dentro SignIn*/
+#signInOutDropdown{
+   padding: 15px;
+   min-width: 250px;
+}
+
+#listSearch{
+    min-width: 380px;
+}
+
