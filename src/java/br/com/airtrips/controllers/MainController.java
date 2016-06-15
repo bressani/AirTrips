@@ -5,9 +5,7 @@
  */
 package br.com.airtrips.controllers;
 
-import br.com.airtrips.services.Handler;
 import java.net.BindException;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -72,26 +70,7 @@ public class MainController extends AbstractController {
         String service = request.getParameter("service");
         String parametro = request.getParameter("classe");
         String acao = request.getParameter("acao");
-        String nomeDaClasse = "br.com.airtrips.database.objects." + parametro;
-        String nomeServico = "br.com.airtrips.services." + service;
-
-        if (service != null) {
-            try {
-                Class classe = Class.forName(nomeDaClasse);
-                Object obj = (Object) classe.newInstance();
-
-                Class servico = Class.forName(nomeServico);
-                Handler handler = (Handler) servico.newInstance();
-
-                if (acao != null && acao.equalsIgnoreCase("preenche")) {
-                    handler.preencher(obj, request);
-                }
-
-            } catch (Exception e) {
-                throw new ServletException(
-                        "A lógica de negócios causou uma exceção", e);
-            }
-        }
+  
         ModelAndView mv = new ModelAndView(redirectUrl);
         return mv;
     }
