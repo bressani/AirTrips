@@ -32,6 +32,8 @@
 
     <body>
         <!-- Fixed navbar -->
+        
+    <div id="navbarFloater">    
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -45,7 +47,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="redirect.htm?page=index">Página Inicial</a></li>
+                    <li><a href="redirect.htm?page=index">Página Inicial</a></li>
                     <li><a href="redirect.htm?page=about">Sobre nós</a></li>
                     <li><a href="redirect.htm?page=contact">Fale Conosco</a></li>
                     <li class="dropdown">
@@ -107,6 +109,7 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+   </div>
     <!-- end of navbar -->
 
     <form>
