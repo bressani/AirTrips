@@ -1,0 +1,1 @@
+$("#navbarFloater").load("index.htm #navbarFloater" );
