@@ -6,6 +6,7 @@
 package br.com.airtrips.database.objects;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 /**
  *
@@ -14,18 +15,18 @@ import java.time.LocalDate;
 public class User {
 
     private int cpf;
-    private String first_name;
-    private String last_name;
+    private String name;
+    private char genre;
+    private String zipcode;
     private String adress;
-    private int number_house;
-    private String adds_adress;
-    private int zip_code;
-    private String state;
+    private String tel;
+    private String cel;
     private String city;
-    private String email;
-    private LocalDate data_nascimento;
-    private int RG;
-    private int credit_card;
+    private char state;
+    private Date datanascimento;
+    private int idade;
+    private String pai;
+    private String mae;
 
     public int getCpf() {
         return cpf;
@@ -35,20 +36,28 @@ public class User {
         this.cpf = cpf;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getName() {
+        return name;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public char getGenre() {
+        return genre;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setGenre(char genre) {
+        this.genre = genre;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 
     public String getAdress() {
@@ -59,36 +68,20 @@ public class User {
         this.adress = adress;
     }
 
-    public int getNumber_house() {
-        return number_house;
+    public String getTel() {
+        return tel;
     }
 
-    public void setNumber_house(int number_house) {
-        this.number_house = number_house;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
-    public String getAdds_adress() {
-        return adds_adress;
+    public String getCel() {
+        return cel;
     }
 
-    public void setAdds_adress(String adds_adress) {
-        this.adds_adress = adds_adress;
-    }
-
-    public int getZip_code() {
-        return zip_code;
-    }
-
-    public void setZip_code(int zip_code) {
-        this.zip_code = zip_code;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
+    public void setCel(String cel) {
+        this.cel = cel;
     }
 
     public String getCity() {
@@ -99,37 +92,47 @@ public class User {
         this.city = city;
     }
 
-    public String getEmail() {
-        return email;
+    public char getState() {
+        return state;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setState(char state) {
+        this.state = state;
     }
 
-    public LocalDate getData_nascimento() {
-        return data_nascimento;
+    public Date getDatanascimento() {
+        return datanascimento;
     }
 
-    public void setData_nascimento(LocalDate data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDatanascimento(Date datanascimento) {
+        this.datanascimento = datanascimento;
     }
 
-    public int getRG() {
-        return RG;
+    public int getIdade() {
+        return idade;
     }
 
-    public void setRG(int RG) {
-        this.RG = RG;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
-    public int getCredit_card() {
-        return credit_card;
+    public String getPai() {
+        return pai;
     }
 
-    public void setCredit_card(int credit_card) {
-        this.credit_card = credit_card;
+    public void setPai(String pai) {
+        this.pai = pai;
+    }
+
+    public String getMae() {
+        return mae;
+    }
+
+    public void setMae(String mae) {
+        this.mae = mae;
     }
     
+   
+
     
 }
