@@ -32,6 +32,8 @@
 
     <body>
         <!-- Fixed navbar -->
+
+        <div id="navbarFloater">    
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -45,9 +47,10 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="redirect.htm?page=index">Página Inicial</a></li>
+                            <li><a href="redirect.htm?page=index">Página Inicial</a></li>
                             <li><a href="redirect.htm?page=about">Sobre nós</a></li>
                             <li><a href="redirect.htm?page=contact">Fale Conosco</a></li>
+                            <!-- Dropdown
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -58,8 +61,9 @@
                                     <li class="dropdown-header">Nav header</li>
                                     <li><a href="#">Separated link</a></li>
                                     <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
+                            -->
+                        </ul>
+                        </li>
                         </ul>
 
                         <!-- Sign in Sign On -->
@@ -107,9 +111,9 @@
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
-            <!-- end of navbar -->
- 
-            
+        </div>
+        <!-- end of navbar -->
+
         <form>
             <input type="text" class="form-control" placeholder="Origem" aria-describedby="sizing-addon1">
             <br>

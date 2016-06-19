@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Venator
  */
-public interface GernericDao {
+public interface GenericDAO {
 
     public void insert(Object object) throws SQLException;
 

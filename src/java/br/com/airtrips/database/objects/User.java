@@ -14,58 +14,67 @@ import java.util.Date;
  */
 public class User {
 
-    private int cpf;
-    private String name;
-    private char genre;
-    private String zipcode;
-    private String adress;
+    private String cpf;
+    private String rg;
+    private String nome;
+    private String sexo;
+    private String cep;
+    private String endereco;
     private String tel;
     private String cel;
-    private String city;
-    private char state;
-    private Date datanascimento;
+    private String cidade;
+    private String estado;
+    private LocalDate datanascimento;
     private int idade;
     private String pai;
     private String mae;
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public String getName() {
-        return name;
+    public String getRg() {
+        return rg;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 
-    public char getGenre() {
-        return genre;
+    public String getNome() {
+        return nome;
     }
 
-    public void setGenre(char genre) {
-        this.genre = genre;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getZipcode() {
-        return zipcode;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getCep() {
+        return cep;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getTel() {
@@ -84,27 +93,27 @@ public class User {
         this.cel = cel;
     }
 
-    public String getCity() {
-        return city;
+    public String getCidade() {
+        return cidade;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
-    public char getState() {
-        return state;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setState(char state) {
-        this.state = state;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public Date getDatanascimento() {
+    public LocalDate getDatanascimento() {
         return datanascimento;
     }
 
-    public void setDatanascimento(Date datanascimento) {
+    public void setDatanascimento(LocalDate datanascimento) {
         this.datanascimento = datanascimento;
     }
 
@@ -131,8 +140,6 @@ public class User {
     public void setMae(String mae) {
         this.mae = mae;
     }
-    
-   
 
     
 }
