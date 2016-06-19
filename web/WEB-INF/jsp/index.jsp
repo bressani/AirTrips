@@ -32,6 +32,7 @@
 
     <body>
         <!-- Fixed navbar -->
+<<<<<<< HEAD
 
         <div id="navbarFloater">    
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -62,6 +63,36 @@
                                     <li><a href="#">Separated link</a></li>
                                     <li><a href="#">One more separated link</a></li>
                             -->
+=======
+        
+    <div id="navbarFloater">    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">AirTrips</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="redirect.htm?page=index">Página Inicial</a></li>
+                    <li><a href="redirect.htm?page=about">Sobre nós</a></li>
+                    <li><a href="redirect.htm?page=contact">Fale Conosco</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+>>>>>>> origin/master
                         </ul>
                         </li>
                         </ul>
@@ -112,8 +143,15 @@
                 </div>
             </nav>
         </div>
+<<<<<<< HEAD
         <!-- end of navbar -->
+=======
+    </nav>
+   </div>
+    <!-- end of navbar -->
+>>>>>>> origin/master
 
+<<<<<<< HEAD
         <form>
             <input type="text" class="form-control" placeholder="Origem" aria-describedby="sizing-addon1">
             <br>
@@ -123,6 +161,96 @@
                 <span class="glyphicon glyphicon-plane" aria-hidden="true"></span> Procurar
             </button>
             <form>
+=======
+    <!-- 
+    <form>
+        <input type="text" class="form-control" placeholder="Origem" aria-describedby="sizing-addon1">
+        <br>
+        <input type="text" class="form-control" placeholder="Destino" aria-describedby="sizing-addon1">
+        
+        <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-plane" aria-hidden="true"></span> Procurar
+        </button>
+        </form>-->
+    
+  <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form id="form1" role="form">             
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <br>Origem<br>
+                        <select id="uf" name="uf" class="form-control input-lg" placeholder="UF" tabindex="9">
+                                            <option value="">UF</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                          </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <br>Destino<br>
+                            <select id="uf" name="uf" class="form-control input-lg" placeholder="UF" tabindex="9">
+                                            <option value="">UF</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                          </select>
+                        </div>
+                    </div>
+                     
+    </div>
+                </form>
+    </div>
+    </div>
+>>>>>>> origin/master
 
 
                 <!-- Bootstrap core JavaScript

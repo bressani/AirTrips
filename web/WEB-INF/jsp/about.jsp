@@ -31,6 +31,7 @@
     </head>
 
     <body>
+<<<<<<< HEAD
 
         <!--navbar-->
         <div id="navbarFloater">
@@ -42,6 +43,18 @@
             Compartilhamos da idéia de ganhar muito dinheiro vendendo joguinhos a preços absurdos.<br>
             A qualidade não é o nosso foco, muito menos o cumprimento de prazos.<br>
             HUEHU3HUEhue!!11!!!onze!!</center>   
+=======
+        
+       <div id="navbarFloater">
+        </div>
+        
+    <center>A <b>AirTrips</b> é uma empresa de pequeno porte de desenvolvimento de softwares.<br>
+        A equipe é composta por: <b>Felipe, Jair, Marcelo, Marcus e Renato.</b><br>
+        Somos estudantes de Ciência da Computação na universidade Anhembi Morumbi.<br>
+        Compartilhamos da idéia de ganhar muito dinheiro vendendo joguinhos a preços absurdos.<br>
+        A qualidade não é o nosso foco, muito menos o cumprimento de prazos.<br>
+        HUEHU3HUEhue!!11!!!onze!!</center>   
+>>>>>>> origin/master
 
 
 
@@ -52,8 +65,15 @@
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
 
+<<<<<<< HEAD
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
         <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script>
     </body>
+=======
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script>
+</body>
+>>>>>>> origin/master
 </html>

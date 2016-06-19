@@ -47,6 +47,7 @@
     <script src="${pageContext.request.contextPath}/resources/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Script load menu -->
     <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script> 
+    
 
 </body>
 </html>
