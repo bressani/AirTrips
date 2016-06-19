@@ -23,8 +23,29 @@ public class Algoritmo_Warshall {
         int numero = scan.nextInt();
         // matrizes de distancia e ultimo vertice
         int[][] mat_D = new int[numero][numero];
-        int[][] mat_Pi = {{1, 2, 3}, {1, 2, 0}, {0, 2, 3}};
-        int[][] arestas = {{2, 8, 5}, {3, 0, 0}, {0, 2, 0}};
+        //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
+        int[][] mat_Pi =  {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
+                           {1, 2, 3, 0, 0, 0, 0, 0, 0, 0},
+                           {1, 2, 3, 4, 0, 0, 0, 0, 9, 10},
+                           {0, 0, 3, 4, 5, 0, 0, 0, 0, 10}, 
+                           {0, 0, 0, 4, 5, 6, 0, 8, 0, 10}, 
+                           {0, 0, 0, 0, 5, 6, 7, 8, 0, 0}, 
+                           {0, 0, 0, 0, 0, 6, 7, 8, 0, 0}, 
+                           {1, 0, 0, 0, 5, 6, 7, 8, 9, 0}, 
+                           {1, 0, 3, 0, 0, 0, 0, 8, 9, 0},
+                           {0, 0, 3, 4, 5, 0, 0, 0, 0, 10} };
+        /*Como o projeto nao estipula uma distancia quando há ligação a distancia é 1
+        quando não há ligação distancia é 0*/
+        int[][] arestas = {{1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+                           {1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+                           {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
+                           {0, 0, 1, 1, 1, 0, 0, 0, 0, 1}, 
+                           {0, 0, 0, 1, 1, 1, 0, 1, 0, 1}, 
+                           {0, 0, 0, 0, 1, 1, 1, 1, 0, 0}, 
+                           {0, 0, 0, 0, 0, 1, 1, 1, 0, 0}, 
+                           {1, 0, 0, 0, 1, 1, 1, 1, 1, 0}, 
+                           {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+                           {0, 0, 1, 1, 1, 0, 0, 0, 0, 1} };
         
         // Aplica 0 para loop e infinito para  caminhos desconhecidos.
 
