@@ -38,14 +38,12 @@ public class UserDAO implements GenericDAO {
         stmt.setString(8, user.getCel());
         stmt.setString(9, user.getCidade());
         stmt.setString(10, user.getEstado());
-        
+
         java.sql.Date nascimentoSql = java.sql.Date.valueOf(user.getDatanascimento());
         stmt.setDate(11, nascimentoSql);
         stmt.setInt(12, user.getIdade());
         stmt.setString(13, user.getPai());
         stmt.setString(14, user.getMae());
-        
-     
 
         stmt.executeUpdate();
         stmt.close();
