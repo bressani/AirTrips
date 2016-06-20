@@ -5,8 +5,6 @@
  */
 package br.com.airtrips.Warshall;
 
-
-
 /**
  *
  * @author Renato
@@ -17,23 +15,22 @@ public class Algoritmo_Warshall {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
 
         int numero = 10;
         // matrizes de distancia e ultimo vertice
         int[][] mat_D = new int[numero][numero];
         /*
-        Id dos Aeroportos:
-        1-Bogotá
-        2-Quito
-        3-Lima
-        4-Santiago
-        5-Buenos Aires
-        6-Rio de Janeiro
-        7-Brasilia
-        8-São Paulo
-        9-Caracas
-        10-La Paz      
+         Id dos Aeroportos:
+         1-Bogotá
+         2-Quito
+         3-Lima
+         4-Santiago
+         5-Buenos Aires
+         6-Rio de Janeiro
+         7-Brasilia
+         8-São Paulo
+         9-Caracas
+         10-La Paz      
          */
         //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
         int[][] mat_Pi = {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
@@ -47,7 +44,7 @@ public class Algoritmo_Warshall {
         {1, 0, 3, 0, 0, 0, 0, 8, 9, 0},
         {0, 0, 3, 4, 5, 0, 0, 0, 0, 10}};
         /*Como o projeto nao estipula uma distancia quando há ligação a distancia é 1
-        quando não há ligação distancia é 0*/
+         quando não há ligação distancia é 0*/
         int[][] arestas = {{1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
         {1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
         {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
@@ -82,9 +79,9 @@ public class Algoritmo_Warshall {
             System.out.println();
         }
         /* procesaamento do Floid-Warshall, se a soma do vertice contigo na matriz D
-        na posição  i,k + o vertice na posição k,j for menor que o atual, 
-        ele sera substituido pela soma.
-        matriz PI registra o ultimo vertice antes de chegar finalizar o caminho.
+         na posição  i,k + o vertice na posição k,j for menor que o atual, 
+         ele sera substituido pela soma.
+         matriz PI registra o ultimo vertice antes de chegar finalizar o caminho.
         
          */
         for (int k = 0; k < numero; k++) {
@@ -109,12 +106,35 @@ public class Algoritmo_Warshall {
         System.out.println("");
 
         System.out.println("\nA Lista PI final \n");
-        for (int linha = 0; linha < mat_D.length; linha++) {
-            for (int coluna = 0; coluna < mat_D[linha].length; coluna++) {
-                System.out.printf("\t %d \t", mat_Pi[linha][coluna]);
+        for (int i = 0; i < mat_D.length; i++) {
+            for (int j = 0; j < mat_D[i].length; j++) {
+                System.out.printf("\t %d \t", mat_Pi[j][i]);
             }
             System.out.println();
         }
+        
+        System.out.println("---------------------------------------------------------------------------------------");
+        //search por voo
+        int origem = 0;
+        int destino =3;
+        
+        if(mat_D[origem][destino]==1){
+            System.out.println("voo sem escala");
+        }
+        
+         if(mat_D[origem][destino]==2){
+            System.out.println("escala: "+mat_Pi[origem][destino]); 
+        }
+        
+         if (mat_D[origem][destino]==3){
+            System.out.println("escala: "+mat_Pi[origem][destino]);
+            int i = 0;
+            while(mat_Pi[i][mat_Pi[origem][destino]]!=mat_Pi[origem][destino]){
+                i++;
+            }
+                System.out.println("escala: "+ mat_Pi[i][mat_Pi[origem][destino]]);
+        }
+        
 
     }
 
