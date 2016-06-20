@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
         <meta name="author" content="">
         <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 
-        <title>Airtrips</title>
+        <title>AirTrips</title>
 
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,8 +54,7 @@
     <!-- Script load menu -->
     <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script> 
 
-=======
-      <head>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,12 +80,12 @@
     <!-- NAVBAR
     ================================================== -->
     <body>
-        
+
         <div id="navbarFloater">
         </div>
 
-    <center><h1>Seus dados de contato foram armazenados, assim que possivel um de 
-        nossos colaboradores entrara em contato com voce.</h1></center>
+    <center><h1>Seus dados de contato foram armazenados, assim que possível um de 
+            nossos colaboradores entrará em contato com você.</h1></center>
 
 
 
@@ -100,6 +99,6 @@
     <script src="${pageContext.request.contextPath}/resources/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Script load menu -->
     <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script> 
-    
->>>>>>> origin/master
+
+
 </html>

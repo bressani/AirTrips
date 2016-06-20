@@ -31,7 +31,7 @@ public class AeroportoDAO implements GenericDAO {
         stm.setInt(2, aero.getIdPonte());
         stm.setString(3, aero.getEndereco());
         stm.setString(4, aero.getCidade());
-        stm.setString(5, aero.getEstado());;
+        stm.setString(5, aero.getPais());;
 
         stm.executeUpdate();
         stm.close();

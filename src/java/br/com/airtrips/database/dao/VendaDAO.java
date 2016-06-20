@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Venator
  */
-public class VendasDAO implements GenericDAO {
+public class VendaDAO implements GenericDAO {
 
     @Override
     public void insert(Object object) throws SQLException {

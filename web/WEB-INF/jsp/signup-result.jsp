@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico">
 
-        <title>Airtrips</title>
+        <title>AirTrips</title>
 
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
     <script src="${pageContext.request.contextPath}/resources/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
     <!-- Script load menu -->
     <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script> 
-    
+
 
 </body>
 </html>

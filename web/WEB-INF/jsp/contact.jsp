@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>AirTrip</title>
+        <title>AirTrips</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,79 +31,79 @@
     </head>
 
     <body>
-       
+
         <div id="navbarFloater">
         </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-            <form id="form1" role="form" data-toggle="validator">
-                <h2>Por favor, preencha este formulário com seus dados para que um dos nossos funcionários
-                    entre em contato com você.</h2>
-                <hr class="colorgraph">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1" required>
-                            <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
-                            usa automaticamente para formatar o visual de erro.-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form id="form1" role="form" data-toggle="validator">
+                    <h2>Por favor, preencha este formulário com seus dados para que um dos nossos funcionários
+                        entre em contato com você.</h2>
+                    <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Nome" tabindex="1" required>
+                                <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
+                                usa automaticamente para formatar o visual de erro.-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Sobrenome" tabindex="2" required>
-                            <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
-                           usa automaticamente para formatar o visual de erro.-->
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="telefone" id="telefone"  class="form-control input-lg" placeholder="(11)1111-1111" tabindex="3" data-error="Por favor, informe um telefone." required 
-                           onKeyPress="MascaraTelefone(this, '## ####-####')" maxlength="12"> 
-
-
-                    <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
-                           usa automaticamente para formatar o visual de erro.-->
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Digite seu email..." tabindex="4" data-error="Por favor, informe um endereço de email." required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="Assunto" id="assunto" class="form-control input-lg" placeholder="assunto" tabindex="4">
-                </div>
-                <div class="form-group">
-                    <textarea type="text" name="Mensagem" id="mensagem" class="form-control input-lg" placeholder="Digite sua mensagem..." tabindex="4"></textarea>
-                </div>
-                <div class="row">                            
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <div class="col-xs-12 col-md-6">
-                                <input type="submit" value="Enviar" class="btn btn-primary btn-block btn-lg" tabindex="7">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Sobrenome" tabindex="2" required>
+                                <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
+                               usa automaticamente para formatar o visual de erro.-->
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="telefone" id="telefone"  class="form-control input-lg" placeholder="(11)1111-1111" tabindex="3" data-error="Por favor, informe um telefone." required 
+                               onKeyPress="MascaraTelefone(this, '## ####-####')" maxlength="12"> 
 
-                </div>
 
-                <h2>
-                    Atenciosamente,<br>
-                    <small>Equipe AirTrips</small></h2>
-            </form>
+                        <!-- No campo Nome foi colocado apenas um atributo required. Isso é padrão do HTML5 e a lib
+                               usa automaticamente para formatar o visual de erro.-->
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Digite seu email..." tabindex="4" data-error="Por favor, informe um endereço de email." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Assunto" id="assunto" class="form-control input-lg" placeholder="assunto" tabindex="4">
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" name="Mensagem" id="mensagem" class="form-control input-lg" placeholder="Digite sua mensagem..." tabindex="4"></textarea>
+                    </div>
+                    <div class="row">                            
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <div class="col-xs-12 col-md-6">
+                                    <input type="submit" value="Enviar" class="btn btn-primary btn-block btn-lg" tabindex="7">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h2>
+                        Atenciosamente,<br>
+                        <small>Equipe AirTrips</small></h2>
+                </form>
+            </div>
+
         </div>
 
-    </div>
 
 
+        <!-- Bootstrap core JavaScript
+           ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap core JavaScript
-       ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="${pageContext.request.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script>
-</body>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/insertMenu.js" type="text/javascript"></script>
+    </body>
 </html>

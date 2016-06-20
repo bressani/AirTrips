@@ -17,7 +17,7 @@ public class Algoritmo_Warshall {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("digite o numero de vertices:");
 
         int numero = scan.nextInt();
@@ -35,33 +35,32 @@ public class Algoritmo_Warshall {
         8-São Paulo
         9-Caracas
         10-La Paz      
-        */
+         */
         //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
-        int[][] mat_Pi =  {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
-                           {1, 2, 3, 0, 0, 0, 0, 0, 0, 0},
-                           {1, 2, 3, 4, 0, 0, 0, 0, 9, 10},
-                           {0, 0, 3, 4, 5, 0, 0, 0, 0, 10}, 
-                           {0, 0, 0, 4, 5, 6, 0, 8, 0, 10}, 
-                           {0, 0, 0, 0, 5, 6, 7, 8, 0, 0}, 
-                           {0, 0, 0, 0, 0, 6, 7, 8, 0, 0}, 
-                           {1, 0, 0, 0, 5, 6, 7, 8, 9, 0}, 
-                           {1, 0, 3, 0, 0, 0, 0, 8, 9, 0},
-                           {0, 0, 3, 4, 5, 0, 0, 0, 0, 10} };
+        int[][] mat_Pi = {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
+        {1, 2, 3, 0, 0, 0, 0, 0, 0, 0},
+        {1, 2, 3, 4, 0, 0, 0, 0, 9, 10},
+        {0, 0, 3, 4, 5, 0, 0, 0, 0, 10},
+        {0, 0, 0, 4, 5, 6, 0, 8, 0, 10},
+        {0, 0, 0, 0, 5, 6, 7, 8, 0, 0},
+        {0, 0, 0, 0, 0, 6, 7, 8, 0, 0},
+        {1, 0, 0, 0, 5, 6, 7, 8, 9, 0},
+        {1, 0, 3, 0, 0, 0, 0, 8, 9, 0},
+        {0, 0, 3, 4, 5, 0, 0, 0, 0, 10}};
         /*Como o projeto nao estipula uma distancia quando há ligação a distancia é 1
         quando não há ligação distancia é 0*/
         int[][] arestas = {{1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
-                           {1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
-                           {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
-                           {0, 0, 1, 1, 1, 0, 0, 0, 0, 1}, 
-                           {0, 0, 0, 1, 1, 1, 0, 1, 0, 1}, 
-                           {0, 0, 0, 0, 1, 1, 1, 1, 0, 0}, 
-                           {0, 0, 0, 0, 0, 1, 1, 1, 0, 0}, 
-                           {1, 0, 0, 0, 1, 1, 1, 1, 1, 0}, 
-                           {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
-                           {0, 0, 1, 1, 1, 0, 0, 0, 0, 1} };
-        
-        // Aplica 0 para loop e infinito para  caminhos desconhecidos.
+        {1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+        {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
+        {0, 0, 1, 1, 1, 0, 0, 0, 0, 1},
+        {0, 0, 0, 1, 1, 1, 0, 1, 0, 1},
+        {0, 0, 0, 0, 1, 1, 1, 1, 0, 0},
+        {0, 0, 0, 0, 0, 1, 1, 1, 0, 0},
+        {1, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+        {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
+        {0, 0, 1, 1, 1, 0, 0, 0, 0, 1}};
 
+        // Aplica 0 para loop e infinito para  caminhos desconhecidos.
         for (int linha = 0; linha < arestas.length; linha++) {
             for (int coluna = 0; coluna < arestas[linha].length; coluna++) {
                 if (coluna == linha) {
@@ -88,7 +87,7 @@ public class Algoritmo_Warshall {
         ele sera substituido pela soma.
         matriz PI registra o ultimo vertice antes de chegar finalizar o caminho.
         
-        */
+         */
         for (int k = 0; k < numero; k++) {
             for (int i = 0; i < numero; i++) {
                 for (int j = 0; j < numero; j++) {
@@ -119,5 +118,5 @@ public class Algoritmo_Warshall {
         }
 
     }
-    
+
 }

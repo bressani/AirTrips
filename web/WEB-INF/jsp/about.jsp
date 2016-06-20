@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>AirTrip</title>
+        <title>AirTrips</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,25 +35,13 @@
         <!--navbar-->
         <div id="navbarFloater">
         </div>  
-        
+
         <center>A <b>AirTrips</b> é uma empresa de pequeno porte de desenvolvimento de softwares.<br>
             A equipe é composta por: <b>Felipe, Jair, Marcelo, Marcus e Renato.</b><br>
             Somos estudantes de Ciência da Computação na universidade Anhembi Morumbi.<br>
             Compartilhamos da idéia de ganhar muito dinheiro vendendo joguinhos a preços absurdos.<br>
             A qualidade não é o nosso foco, muito menos o cumprimento de prazos.<br>
             HUEHU3HUEhue!!11!!!onze!!</center>   
-        
-       <div id="navbarFloater">
-        </div>
-        
-    <center>A <b>AirTrips</b> é uma empresa de pequeno porte de desenvolvimento de softwares.<br>
-        A equipe é composta por: <b>Felipe, Jair, Marcelo, Marcus e Renato.</b><br>
-        Somos estudantes de Ciência da Computação na universidade Anhembi Morumbi.<br>
-        Compartilhamos da idéia de ganhar muito dinheiro vendendo joguinhos a preços absurdos.<br>
-        A qualidade não é o nosso foco, muito menos o cumprimento de prazos.<br>
-        HUEHU3HUEhue!!11!!!onze!!</center>   
-
-
 
 
         <!-- Bootstrap core JavaScript
