@@ -5,7 +5,7 @@
  */
 package br.com.airtrips.database.dao;
 
-import br.com.airtrips.database.objects.User;
+import br.com.airtrips.database.objects.Voo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -15,36 +15,22 @@ import java.util.List;
  *
  * @author Venator
  */
-public class UserDAO implements GenericDAO {
+public class VooDAO implements GenericDAO {
 
     @Override
     public void insert(Object object) throws SQLException {
         DataSourceCon data = new DataSourceCon();
         Connection connection = data.getCon();
 
-        User user = (User) object;
-
-        String sql = "INSERT INTO `usuario`(`CPF`, `RG`, `Nome`, `Sexo`, `CEP`, `Endereço`,"
-                + " `Telefone`, `Celular`, `cidade`, `Estado`, `Data_Nascimento`, `Idade`,"
-                + " `Nome Pai`, `Nome Mae`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        Voo voo = (Voo) object;
+        String sql = "INSERT INTO 'voo'('id_voo', 'id_ponte_aerea',"
+                + " 'companhia', 'aeronave', 'qtd_pessoas') VALUES (?,?,?,?,?)";
         PreparedStatement stm = connection.prepareStatement(sql);
-        stm.setString(1, user.getCpf());
-        stm.setString(2, user.getRg());
-        stm.setString(3, user.getNome());
-        stm.setString(4, user.getSexo());
-        stm.setString(5, user.getCep());
-        stm.setString(6, user.getEndereco());
-        stm.setString(7, user.getTel());
-        stm.setString(8, user.getCel());
-        stm.setString(9, user.getCidade());
-        stm.setString(10, user.getEstado());
-
-        java.sql.Date nascimentoSql = java.sql.Date.valueOf(user.getDatanascimento());
-        stm.setDate(11, nascimentoSql);
-        stm.setInt(12, user.getIdade());
-        stm.setString(13, user.getPai());
-        stm.setString(14, user.getMae());
-
+        stm.setInt(1, voo.getIdVoo());
+        stm.setInt(2, voo.getIdPonte());
+        stm.setString(3, voo.getCompanhia());
+        stm.setString(4, voo.getAeronave());
+        stm.setInt(5, voo.getQtdPessoas());
         stm.executeUpdate();
         stm.close();
         connection.close();
@@ -52,9 +38,7 @@ public class UserDAO implements GenericDAO {
 
     @Override
     public List search(long id) throws SQLException {
-        List listObjects = null;
-
-        return listObjects;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

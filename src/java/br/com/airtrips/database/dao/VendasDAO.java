@@ -5,45 +5,38 @@
  */
 package br.com.airtrips.database.dao;
 
-import br.com.airtrips.database.objects.User;
+import br.com.airtrips.database.objects.Venda;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
  *
  * @author Venator
  */
-public class UserDAO implements GenericDAO {
+public class VendasDAO implements GenericDAO {
 
     @Override
     public void insert(Object object) throws SQLException {
         DataSourceCon data = new DataSourceCon();
         Connection connection = data.getCon();
 
-        User user = (User) object;
+        Venda venda = (Venda) object;
 
-        String sql = "INSERT INTO `usuario`(`CPF`, `RG`, `Nome`, `Sexo`, `CEP`, `Endereço`,"
-                + " `Telefone`, `Celular`, `cidade`, `Estado`, `Data_Nascimento`, `Idade`,"
-                + " `Nome Pai`, `Nome Mae`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO `venda`(`id_venda`, `id_ponte_aerea`, `passageiro`,"
+                + " `usuario_cpf`, `data_venda`, `qtd_passagens`,'valor') "
+                + "VALUES (?,?,?,?,?,?,?)";
         PreparedStatement stm = connection.prepareStatement(sql);
-        stm.setString(1, user.getCpf());
-        stm.setString(2, user.getRg());
-        stm.setString(3, user.getNome());
-        stm.setString(4, user.getSexo());
-        stm.setString(5, user.getCep());
-        stm.setString(6, user.getEndereco());
-        stm.setString(7, user.getTel());
-        stm.setString(8, user.getCel());
-        stm.setString(9, user.getCidade());
-        stm.setString(10, user.getEstado());
-
-        java.sql.Date nascimentoSql = java.sql.Date.valueOf(user.getDatanascimento());
-        stm.setDate(11, nascimentoSql);
-        stm.setInt(12, user.getIdade());
-        stm.setString(13, user.getPai());
-        stm.setString(14, user.getMae());
+        stm.setInt(1, venda.getIdVenda());
+        stm.setInt(2, venda.getIdPonteAerea());
+        stm.setInt(3, venda.getIdPassageiro());
+        stm.setString(4, venda.getCpf());
+        java.sql.Date nascimentoSql = java.sql.Date.valueOf(LocalDate.now());
+        stm.setDate(5, nascimentoSql);
+        stm.setInt(6, venda.getQtdPassagens());
+        stm.setDouble(7, venda.getValor());
 
         stm.executeUpdate();
         stm.close();
@@ -52,9 +45,7 @@ public class UserDAO implements GenericDAO {
 
     @Override
     public List search(long id) throws SQLException {
-        List listObjects = null;
-
-        return listObjects;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
