@@ -23,8 +23,8 @@ public class VooDAO implements GenericDAO {
         Connection connection = data.getCon();
 
         Voo voo = (Voo) object;
-        String sql = "INSERT INTO voo (id_voo, id_ponte_aerea,"
-                + " companhia, aeronave, qtd_pessoas) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO 'voo'('id_voo', 'id_ponte_aerea',"
+                + " 'companhia', 'aeronave', 'qtd_pessoas') VALUES (?,?,?,?,?)";
         PreparedStatement stm = connection.prepareStatement(sql);
         stm.setInt(1, voo.getIdVoo());
         stm.setInt(2, voo.getIdPonte());
@@ -32,6 +32,8 @@ public class VooDAO implements GenericDAO {
         stm.setString(4, voo.getAeronave());
         stm.setInt(5, voo.getQtdPessoas());
         stm.executeUpdate();
+        stm.close();
+        connection.close();
     }
 
     @Override
