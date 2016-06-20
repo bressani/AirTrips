@@ -5,6 +5,7 @@ Tabela referente ao Ponte Aerea
 ***************************************************************************/
 
 CREATE TABLE PONTE_AEREA (
+  ID_PONTE_AEREA INTEGER NOT NULL AUTO_INCREMENT,
   ID_AEROPORTO_ORIGEM VARCHAR(50) NULL,
   ID_AEROPORTO_DESTINO VARCHAR(50) NULL,
   DISTANCIA DOUBLE NULL  
@@ -15,7 +16,7 @@ Tabela referente ao Usuario
 ***************************************************************************/
 
 CREATE TABLE USUARIO (
-  CPF VARCHAR(13) NOT NULL AUTO_INCREMENT,
+  CPF VARCHAR(13) NOT NULL,
   RG VARCHAR(15) NULL,
   NOME VARCHAR(100) NULL,
   SEXO CHAR(1) NULL,
