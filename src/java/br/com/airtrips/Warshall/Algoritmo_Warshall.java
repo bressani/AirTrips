@@ -5,7 +5,7 @@
  */
 package br.com.airtrips.Warshall;
 
-import java.util.Scanner;
+
 
 /**
  *
@@ -17,10 +17,9 @@ public class Algoritmo_Warshall {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("digite o numero de vertices:");
+        
 
-        int numero = scan.nextInt();
+        int numero = 10;
         // matrizes de distancia e ultimo vertice
         int[][] mat_D = new int[numero][numero];
         /*
