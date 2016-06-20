@@ -8,6 +8,8 @@
  * Created: Jun 19, 2016
  */
 
+
+/* não utilizaremos por enquanto
 INSERT into aeroporto (id_aeroporto, cidade, pais) VALUES (1, 'bogota', 'colombia');
 INSERT into aeroporto (id_aeroporto, cidade, pais) VALUES (2, 'quito', 'equador');
 INSERT into aeroporto (id_aeroporto, cidade, pais) VALUES (3, 'lima', 'peru');

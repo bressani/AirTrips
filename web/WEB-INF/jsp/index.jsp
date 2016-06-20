@@ -88,11 +88,13 @@
                                         <!--<br>Origem<br>-->
                                         <select id="origem" name="origem" class="form-control input-lg" placeholder="Origem" required>
                                             <option value="" disabled selected hidden>Origem</caption>
+                                                
+                                                <!-- NÃO ALTERAR OS VALORES -->
                                             <option value=1>Bogotá</option>
                                             <option value=7>Brasília</option>
                                             <option value=5>Buenos Aires</option>
                                             <option value=9>Caracas</option>
-                                            <option value=10>La Pas</option>
+                                            <option value=10>La Paz</option>
                                             <option value=3>Lima</option>
                                             <option value=2>Quito</option>
                                             <option value=6>Rio de Janeiro</option>
@@ -109,7 +111,7 @@
                                                 <option value=7>Brasília</option>
                                                 <option value=5>Buenos Aires</option>
                                                 <option value=9>Caracas</option>
-                                                <option value=10>La Pas</option>
+                                                <option value=10>La Paz</option>
                                                 <option value=3>Lima</option>
                                                 <option value=2>Quito</option>
                                                 <option value=6>Rio de Janeiro</option>

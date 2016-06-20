@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="telefone" id="telefone"  class="form-control input-lg" placeholder="(11)1111-1111" tabindex="3" data-error="Por favor, informe um telefone." required 
+                        <input type="text" name="telefone" id="telefone"  class="form-control input-lg" placeholder="(11) 1111-1111" tabindex="3" data-error="Por favor, informe um telefone." required 
                                onKeyPress="MascaraTelefone(this, '## ####-####')" maxlength="12"> 
 
 
@@ -66,10 +66,10 @@
                                usa automaticamente para formatar o visual de erro.-->
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Digite seu email..." tabindex="4" data-error="Por favor, informe um endereço de email." required>
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Digite seu email" tabindex="4" data-error="Por favor, informe um endereço de email." required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="Assunto" id="assunto" class="form-control input-lg" placeholder="assunto" tabindex="4">
+                        <input type="text" name="Assunto" id="assunto" class="form-control input-lg" placeholder="Assunto" tabindex="4">
                     </div>
                     <div class="form-group">
                         <textarea type="text" name="Mensagem" id="mensagem" class="form-control input-lg" placeholder="Digite sua mensagem..." tabindex="4"></textarea>
@@ -87,7 +87,7 @@
 
                     <h2>
                         Atenciosamente,<br>
-                        <small>Equipe AirTrips</small></h2>
+                        <small>Equipe AirTrips.</small></h2>
                 </form>
             </div>
 
