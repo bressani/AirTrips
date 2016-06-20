@@ -23,6 +23,19 @@ public class Algoritmo_Warshall {
         int numero = scan.nextInt();
         // matrizes de distancia e ultimo vertice
         int[][] mat_D = new int[numero][numero];
+        /*
+        Id dos Aeroportos:
+        1-Bogotá
+        2-Quito
+        3-Lima
+        4-Santiago
+        5-Buenos Aires
+        6-Rio de Janeiro
+        7-Brasilia
+        8-São Paulo
+        9-Caracas
+        10-La Paz      
+        */
         //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
         int[][] mat_Pi =  {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
                            {1, 2, 3, 0, 0, 0, 0, 0, 0, 0},
