@@ -64,9 +64,16 @@
                                     <li><a href="#">One more separated link</a></li>
                             -->
 
-
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="redirect.htm?page=cart" class="button"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 2 Itens
+                                    </a>
+                                </li>
+                            </ul>
                             </nav>
+
                     </div>
+
                     <!-- end of navbar -->
 
                     <!-- 
@@ -88,7 +95,7 @@
                                         <!--<br>Origem<br>-->
                                         <select id="origem" name="origem" class="form-control input-lg" placeholder="Origem" required>
                                             <option value="" disabled selected hidden>Origem</caption>
-                                                
+
                                                 <!-- NÃO ALTERAR OS VALORES -->
                                             <option value=1>Bogotá</option>
                                             <option value=7>Brasília</option>
