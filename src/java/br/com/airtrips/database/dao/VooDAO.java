@@ -16,16 +16,20 @@ import java.util.List;
  * @author Venator
  */
 public class VooDAO implements GenericDAO {
+    
+    private Connection con;
+    
+   public VooDAO() throws SQLException, ClassNotFoundException {
+        con = new DataSource().getCon();
+    }
 
     @Override
     public void insert(Object object) throws SQLException {
-        DataSourceCon data = new DataSourceCon();
-        Connection connection = data.getCon();
-
+        
         Voo voo = (Voo) object;
         String sql = "INSERT INTO 'voo'('id_voo', 'id_ponte_aerea',"
                 + " 'companhia', 'aeronave', 'qtd_pessoas') VALUES (?,?,?,?,?)";
-        PreparedStatement stm = connection.prepareStatement(sql);
+        PreparedStatement stm = con.prepareStatement(sql);
         stm.setInt(1, voo.getIdVoo());
         stm.setInt(2, voo.getIdPonte());
         stm.setString(3, voo.getCompanhia());
@@ -33,7 +37,7 @@ public class VooDAO implements GenericDAO {
         stm.setInt(5, voo.getQtdPessoas());
         stm.executeUpdate();
         stm.close();
-        connection.close();
+        con.close();
     }
 
     @Override

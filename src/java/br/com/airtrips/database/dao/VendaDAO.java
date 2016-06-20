@@ -17,18 +17,22 @@ import java.util.List;
  * @author Venator
  */
 public class VendaDAO implements GenericDAO {
-
+   
+    private Connection con; 
+    
+    public VendaDAO() throws SQLException, ClassNotFoundException {
+        con = new DataSource().getCon();
+    }
+    
     @Override
-    public void insert(Object object) throws SQLException {
-        DataSourceCon data = new DataSourceCon();
-        Connection connection = data.getCon();
+    public void insert(Object object) throws SQLException {       
 
         Venda venda = (Venda) object;
 
         String sql = "INSERT INTO `venda`(`id_venda`, `id_ponte_aerea`, `passageiro`,"
                 + " `usuario_cpf`, `data_venda`, `qtd_passagens`,'valor') "
                 + "VALUES (?,?,?,?,?,?,?)";
-        PreparedStatement stm = connection.prepareStatement(sql);
+        PreparedStatement stm = con.prepareStatement(sql);
         stm.setInt(1, venda.getIdVenda());
         stm.setInt(2, venda.getIdPonteAerea());
         stm.setInt(3, venda.getIdPassageiro());
@@ -40,7 +44,7 @@ public class VendaDAO implements GenericDAO {
 
         stm.executeUpdate();
         stm.close();
-        connection.close();
+        con.close();
     }
 
     @Override

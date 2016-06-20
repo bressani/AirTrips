@@ -16,18 +16,23 @@ import java.util.List;
  * @author Venator
  */
 public class UserDAO implements GenericDAO {
+    
+    private Connection con;
+    
+    public UserDAO() throws SQLException, ClassNotFoundException {
+        con = new DataSource().getCon();
+    }
 
     @Override
     public void insert(Object object) throws SQLException {
-        DataSourceCon data = new DataSourceCon();
-        Connection connection = data.getCon();
+       
 
         User user = (User) object;
 
         String sql = "INSERT INTO `usuario`(`CPF`, `RG`, `Nome`, `Sexo`, `CEP`, `Endereço`,"
                 + " `Telefone`, `Celular`, `cidade`, `Estado`, `Data_Nascimento`, `Idade`,"
                 + " `Nome Pai`, `Nome Mae`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        PreparedStatement stm = connection.prepareStatement(sql);
+        PreparedStatement stm = con.prepareStatement(sql);
         stm.setString(1, user.getCpf());
         stm.setString(2, user.getRg());
         stm.setString(3, user.getNome());
@@ -47,7 +52,7 @@ public class UserDAO implements GenericDAO {
 
         stm.executeUpdate();
         stm.close();
-        connection.close();
+        con.close();
     }
 
     @Override
