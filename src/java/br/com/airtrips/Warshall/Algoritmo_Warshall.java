@@ -56,7 +56,7 @@ public class Algoritmo_Warshall {
      * @param args the command line arguments
      * 
      */
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+    public static void AlgoritmoWharshall() throws SQLException, ClassNotFoundException {
 
         int numero = 10;
         // matrizes de distancia e ultimo vertice
@@ -188,8 +188,6 @@ public class Algoritmo_Warshall {
             }
                 System.out.println("escala: " + mat_Pi[i][mat_Pi[origem][destino]]);
         }
-        
 
-    }
-
+}
 }
