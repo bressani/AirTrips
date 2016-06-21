@@ -5,7 +5,10 @@
  */
 package br.com.airtrips.controllers;
 
+import br.com.airtrips.Warshall.CalculadorPonte;
+import br.com.airtrips.database.dao.PonteAereaDAO;
 import br.com.airtrips.database.dao.UserDAO;
+import br.com.airtrips.database.objects.PonteAerea;
 import br.com.airtrips.database.objects.User;
 import java.net.BindException;
 import java.time.LocalDate;
@@ -111,6 +114,21 @@ public class MainController extends AbstractController {
 
                 }
             }
+            
+            if(parametro.equalsIgnoreCase("PonteAerea")){
+                //searchPonte
+                int origem = Integer.parseInt(request.getParameter("origem"));
+                int destino = Integer.parseInt(request.getParameter("destino"));
+                PonteAereaDAO ptDAO = new PonteAereaDAO();
+                PonteAerea ponte = ptDAO.searchPonte(origem, destino);
+                CalculadorPonte calc = new CalculadorPonte();
+                String retornaResultPonte = calc.retornaResultPonte(ponte);
+                ModelAndView mv = new ModelAndView("ponte-result");
+                mv.addObject("result", retornaResultPonte);
+                return mv;
+            }
+            
+            
         }
         ModelAndView mv = new ModelAndView(redirectUrl);
         return mv;

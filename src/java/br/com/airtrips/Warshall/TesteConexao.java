@@ -8,8 +8,6 @@ package br.com.airtrips.Warshall;
 import br.com.airtrips.database.dao.PonteAereaDAO;
 import br.com.airtrips.database.objects.PonteAerea;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**

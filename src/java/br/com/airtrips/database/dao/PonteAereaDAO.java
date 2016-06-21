@@ -23,10 +23,9 @@ import java.util.Vector;
  * @author Felipe
  */
 public class PonteAereaDAO implements GenericDAO {
-    
+
     private Connection con;
-    
-    
+
     public PonteAereaDAO() throws SQLException, ClassNotFoundException {
         con = new DataSource().getCon();
     }
@@ -37,33 +36,54 @@ public class PonteAereaDAO implements GenericDAO {
     }
 
     @Override
-    public List search(long id) throws SQLException {
+    public List search(long id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public List search() throws SQLException{    
-        
+
+    public PonteAerea searchPonte(int origem, int destino) throws SQLException {
+        PonteAerea novo = new PonteAerea();
+        String sql = "SELECT * FROM `ponte_aerea` WHERE `id_aeroporto_origem` =  ? AND `id_aeroporto_destino` = ?;";
+        try (PreparedStatement stm = con.prepareStatement(sql)) {
+            stm.setInt(1, origem);
+            stm.setInt(2, destino);
+            ResultSet rs = stm.executeQuery();
+            while (rs.next()) {
+
+                novo.setID_PONTE_AEREA(rs.getInt(1));
+                novo.setID_AEROPORTO_ORIGEM(rs.getInt(2));
+                novo.setID_AEROPORTO_DESTINO(rs.getInt(3));
+                novo.setDISTANCIA(rs.getInt(4));
+                novo.setQTD_ESCALAS(rs.getInt(5));
+                novo.setID_AEROPORTO_ESCALA(rs.getInt(6));
+            }
+        } catch (SQLException ex) {
+            System.err.println("Erro sql");
+        }
+        return novo;
+    }
+
+    public List search() throws SQLException {
+
         ArrayList<PonteAerea> pa = new ArrayList<PonteAerea>();
         String sql = "SELECT * FROM ponte_aerea";
-        PreparedStatement stm = con.prepareStatement(sql);       
-                
+        PreparedStatement stm = con.prepareStatement(sql);
+
         ResultSet rs = stm.executeQuery();
-        
-        while(rs.next()){
-          PonteAerea novo = new PonteAerea();
-          novo.setID_PONTE_AEREA(rs.getInt(1));
-          novo.setID_AEROPORTO_ORIGEM(rs.getInt(2));
-          novo.setID_AEROPORTO_DESTINO(rs.getInt(3));
-          novo.setDISTANCIA(rs.getInt(4));
-          novo.setQTD_ESCALAS(rs.getInt(5));
-          novo.setID_AEROPORTO_ESCALA(rs.getInt(6));
-          pa.add(novo);
+
+        while (rs.next()) {
+            PonteAerea novo = new PonteAerea();
+            novo.setID_PONTE_AEREA(rs.getInt(1));
+            novo.setID_AEROPORTO_ORIGEM(rs.getInt(2));
+            novo.setID_AEROPORTO_DESTINO(rs.getInt(3));
+            novo.setDISTANCIA(rs.getInt(4));
+            novo.setQTD_ESCALAS(rs.getInt(5));
+            novo.setID_AEROPORTO_ESCALA(rs.getInt(6));
+            pa.add(novo);
         }
         stm.close();
-        con.close(); 
-        
-          
-       return pa;
+        con.close();
+
+        return pa;
     }
 
     @Override
@@ -75,5 +95,5 @@ public class PonteAereaDAO implements GenericDAO {
     public void remove(long id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
