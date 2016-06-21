@@ -35,9 +35,9 @@
         <div id="navbarFloater">
         </div>
         <div class="container center-block">
-        <h1>Resultado de sua viajem!!!</h1>
-       <h3>${result}</h3>
-</div>
+            <h1>Resultado da Busca:</h1>
+            <h3>${result}</h3>
+        </div>
 
 
         <!-- Bootstrap core JavaScript
