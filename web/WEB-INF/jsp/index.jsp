@@ -70,44 +70,44 @@
                                     </a>
                                 </li>
                             </ul>
-                            
+
                             <!--  ====================================== 
                                 ======================Sign in Sign On ===== -->
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="redirect.htm?page=signup" onclick="">Cadastre-se</a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar 
-                                            <img src="${pageContext.request.contextPath}/resources/images/menu/logIn.png" alt="login" width="10px" height="10px">
-                                        </a>
-                                        <ul id="signInOutDropdown" class="dropdown-menu" >
-                                            <li>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                            <div class="form-group">
-                                                                <label class="sr-only" for="exampleInputEmail2">Endereço de e-mail</label>
-                                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Endereço de e-mail" required>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="sr-only" for="exampleInputPassword2">Senha</label>
-                                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha" required>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Lembrar Senha
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="redirect.htm?page=signup" onclick="">Cadastre-se</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar 
+                                        <img src="${pageContext.request.contextPath}/resources/images/menu/logIn.png" alt="login" width="10px" height="10px">
+                                    </a>
+                                    <ul id="signInOutDropdown" class="dropdown-menu" >
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="exampleInputEmail2">Endereço de e-mail</label>
+                                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Endereço de e-mail" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="exampleInputPassword2">Senha</label>
+                                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha" required>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox"> Lembrar Senha
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                            </li>
+                                            </div>
+                                        </li>
 
-                                        </ul>
-                                    </li>
-                                </ul>
+                                    </ul>
+                                </li>
+                            </ul>
                             </nav>
 
                     </div>
@@ -146,19 +146,18 @@
                                                    06-Brasilia 
                                                    07-São Paulo
                                                    08-Caracas
-                                                   09-La Paz                                              
-                                                
+                                                   09-La Paz
                                                 -->
-                                                <option value=0>Bogotá</option>
-                                                <option value=6>Brasília</option>
-                                                <option value=4>Buenos Aires</option>
-                                                <option value=8>Caracas</option>
-                                                <option value=9>La Paz</option>
-                                                <option value=2>Lima</option>
-                                                <option value=1>Quito</option>
-                                                <option value=5>Rio de Janeiro</option>
-                                                <option value=3>Santiago</option>
-                                                <option value=7>São Paulo</option>
+                                            <option value=0>Bogotá</option>
+                                            <option value=6>Brasília</option>
+                                            <option value=4>Buenos Aires</option>
+                                            <option value=8>Caracas</option>
+                                            <option value=9>La Paz</option>
+                                            <option value=2>Lima</option>
+                                            <option value=1>Quito</option>
+                                            <option value=5>Rio de Janeiro</option>
+                                            <option value=3>Santiago</option>
+                                            <option value=7>São Paulo</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-6">

@@ -83,41 +83,41 @@ public class MainController extends AbstractController {
             if (parametro.equalsIgnoreCase("User")) {
                 if (acao.equalsIgnoreCase("preenche")) {
                     User user = new User();
-              
+
                     //data_nascimento`
                     user.setCpf(request.getParameter("cpf"));
                     user.setRg(request.getParameter("RG"));
                     user.setNome(request.getParameter("nome"));
-                    if(Integer.parseInt(request.getParameter("radios"))==1){
+                    if (Integer.parseInt(request.getParameter("radios")) == 1) {
                         user.setSexo("M");
-                    }else{
+                    } else {
                         user.setSexo("F");
                     }
-                     user.setCep(request.getParameter("cep"));
-                     user.setEndereco(request.getParameter("endereco"));
-                     user.setTel(request.getParameter("telefone_contato"));
-                     user.setCel(request.getParameter("celular"));
-                     user.setCidade(request.getParameter("cidade"));
-                     user.setEstado(request.getParameter("uf"));
-                     
-                     String dataNascimento = request.getParameter("data_nascimento");
-                     String[] split = dataNascimento.split("-");
-                      LocalDate of = LocalDate.of(Integer.parseInt(split[0]),
-                       Integer.parseInt(split[1]), Integer.parseInt(split[2]));
-                     user.setDatanascimento(of);
-                     user.setSenha(request.getParameter("password"));
-                     
-                     UserDAO userDAO = new UserDAO();
-                     userDAO.insert(user);
+                    user.setCep(request.getParameter("cep"));
+                    user.setEndereco(request.getParameter("endereco"));
+                    user.setTel(request.getParameter("telefone_contato"));
+                    user.setCel(request.getParameter("celular"));
+                    user.setCidade(request.getParameter("cidade"));
+                    user.setEstado(request.getParameter("uf"));
+
+                    String dataNascimento = request.getParameter("data_nascimento");
+                    String[] split = dataNascimento.split("-");
+                    LocalDate of = LocalDate.of(Integer.parseInt(split[0]),
+                            Integer.parseInt(split[1]), Integer.parseInt(split[2]));
+                    user.setDatanascimento(of);
+                    user.setSenha(request.getParameter("password"));
+
+                    UserDAO userDAO = new UserDAO();
+                    userDAO.insert(user);
                     ModelAndView mv = new ModelAndView("signup-result");
                     return mv;
 
-                } else if(acao.equalsIgnoreCase("login")) {
+                } else if (acao.equalsIgnoreCase("login")) {
 
                 }
             }
-            
-            if(parametro.equalsIgnoreCase("PonteAerea")){
+
+            if (parametro.equalsIgnoreCase("PonteAerea")) {
                 //searchPonte
                 int origem = Integer.parseInt(request.getParameter("origem"));
                 int destino = Integer.parseInt(request.getParameter("destino"));
@@ -127,8 +127,7 @@ public class MainController extends AbstractController {
                 mv.addObject("result", retornaResultPonte);
                 return mv;
             }
-            
-            
+
         }
         ModelAndView mv = new ModelAndView(redirectUrl);
         return mv;
