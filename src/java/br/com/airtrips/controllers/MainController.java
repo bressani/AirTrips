@@ -84,9 +84,9 @@ public class MainController extends AbstractController {
                     user.setRg(request.getParameter("RG"));
                     user.setNome(request.getParameter("nome"));
                     if(Integer.parseInt(request.getParameter("radios"))==1){
-                        user.setSexo(request.getParameter("M"));
+                        user.setSexo("M");
                     }else{
-                        user.setSexo(request.getParameter("F"));
+                        user.setSexo("F");
                     }
                      user.setCep(request.getParameter("cep"));
                      user.setEndereco(request.getParameter("endereco"));

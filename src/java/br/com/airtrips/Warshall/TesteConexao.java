@@ -5,7 +5,6 @@
  */
 package br.com.airtrips.Warshall;
 
-import static br.com.airtrips.Warshall.Algoritmo_Warshall.CriaMatrizDistancias;
 import br.com.airtrips.database.dao.PonteAereaDAO;
 import br.com.airtrips.database.objects.PonteAerea;
 import java.sql.SQLException;
