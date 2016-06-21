@@ -5,8 +5,6 @@
  */
 package br.com.airtrips.Warshall;
 
-import java.sql.SQLException;
-
 /**
  *
  * @author Renato
@@ -18,8 +16,11 @@ public class Algoritmo_Warshall {
 
     /**
      * 
+     * @param origem
+     * @param destino
+     * @return 
      */
-    public static String AlgoritmoWharshall(int origem, int destino)  {
+    public String AlgoritmoWharshall(int origem, int destino)  {
 
         int numero = 10;
         // matrizes de distancia e ultimo vertice

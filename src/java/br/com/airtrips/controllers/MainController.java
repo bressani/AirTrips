@@ -5,6 +5,7 @@
  */
 package br.com.airtrips.controllers;
 
+import br.com.airtrips.Warshall.Algoritmo_Warshall;
 import br.com.airtrips.Warshall.CalculadorPonte;
 import br.com.airtrips.database.dao.PonteAereaDAO;
 import br.com.airtrips.database.dao.UserDAO;
@@ -120,10 +121,8 @@ public class MainController extends AbstractController {
                 //searchPonte
                 int origem = Integer.parseInt(request.getParameter("origem"));
                 int destino = Integer.parseInt(request.getParameter("destino"));
-                PonteAereaDAO ptDAO = new PonteAereaDAO();
-                PonteAerea ponte = ptDAO.searchPonte(origem, destino);
-                CalculadorPonte calc = new CalculadorPonte();
-                String retornaResultPonte = calc.retornaResultPonte(ponte);
+                Algoritmo_Warshall algo = new Algoritmo_Warshall();
+                String retornaResultPonte = algo.AlgoritmoWharshall(origem, destino);
                 ModelAndView mv = new ModelAndView("ponte-result");
                 mv.addObject("result", retornaResultPonte);
                 return mv;
