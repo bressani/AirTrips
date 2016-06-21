@@ -19,25 +19,28 @@ public class Algoritmo_Warshall {
     /**
      * 
      */
-    public static void AlgoritmoWharshall() throws SQLException, ClassNotFoundException {
+    public static void AlgoritmoWharshall(int origem, int destino)  {
 
         int numero = 10;
         // matrizes de distancia e ultimo vertice
         int[][] mat_D = new int[numero][numero];
         //int[][] mat_D = new int[numero][numero];
-        /*
+         /*
          Id dos Aeroportos:
-         1-Bogotá
-         2-Quito
-         3-Lima
-         4-Santiago
-         5-Buenos Aires
-         6-Rio de Janeiro
-         7-Brasilia
-         8-São Paulo
-         9-Caracas
-         10-La Paz      
+         00-Bogotá
+         01-Quito
+         02-Lima
+         03-Santiago
+         04-Buenos Aires
+         05-Rio de Janeiro
+         06-Brasilia
+         07-São Paulo
+         08-Caracas
+         09-La Paz      
+        
+        Obs: ficamos com preguiça de alterar o codigo para ter um id 01.
          */
+        
         
         
         //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
@@ -129,25 +132,28 @@ public class Algoritmo_Warshall {
         
         System.out.println("---------------------------------------------------------------------------------------");
         //search por voo
-        int origem = 0;
-        int destino =3;
+       //search por voo
         
+        int distancia=0;
         if(mat_D[origem][destino]==1){
+            distancia =1;
             System.out.println("voo sem escala");
+            System.out.println("distancia: "+distancia);
         }
         
          if(mat_D[origem][destino]==2){
+             distancia =2;
             System.out.println("escala: "+ mat_Pi[origem][destino]); 
+            System.out.println("distancia: "+distancia);
         }
         
          if (mat_D[origem][destino]==3){
-            System.out.println("escala: "+mat_Pi[origem][destino]);
-            int i = 0;
-            while(mat_Pi[i][mat_Pi[origem][destino]]!= mat_Pi[origem][destino]){
-                i++;
+             distancia =3;
+            System.out.println("escala02: "+mat_Pi[origem][destino]);
+            
+             System.out.println("escala01: "+mat_Pi[destino][mat_Pi[origem][destino]]);
+             System.out.println("distancia: "+distancia);
             }
-                System.out.println("escala: " + mat_Pi[i][mat_Pi[origem][destino]]);
-        }
 
 }
 }

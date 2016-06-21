@@ -136,17 +136,29 @@
                                         <select id="origem" name="origem" class="form-control input-lg" placeholder="Origem" required>
                                             <option value="" disabled selected hidden>Origem</caption>
 
-                                                <!-- NÃO ALTERAR OS VALORES -->
-                                            <option value=1>Bogotá</option>
-                                            <option value=7>Brasília</option>
-                                            <option value=5>Buenos Aires</option>
-                                            <option value=9>Caracas</option>
-                                            <option value=10>La Paz</option>
-                                            <option value=3>Lima</option>
-                                            <option value=2>Quito</option>
-                                            <option value=6>Rio de Janeiro</option>
-                                            <option value=4>Santiago</option>
-                                            <option value=8>São Paulo</option>
+                                                <!-- NÃO ALTERAR OS VALORES
+                                                    00-Bogotá 
+                                                   01-Quito
+                                                   02-Lima
+                                                   03-Santiago
+                                                   04-Buenos Aires
+                                                   05-Rio de Janeiro
+                                                   06-Brasilia 
+                                                   07-São Paulo
+                                                   08-Caracas
+                                                   09-La Paz                                              
+                                                
+                                                -->
+                                                <option value=0>Bogotá</option>
+                                                <option value=6>Brasília</option>
+                                                <option value=4>Buenos Aires</option>
+                                                <option value=8>Caracas</option>
+                                                <option value=9>La Paz</option>
+                                                <option value=2>Lima</option>
+                                                <option value=1>Quito</option>
+                                                <option value=5>Rio de Janeiro</option>
+                                                <option value=3>Santiago</option>
+                                                <option value=7>São Paulo</option>
                                         </select>
                                     </div>
                                     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -154,16 +166,16 @@
                                             <!--<br>Destino<br>-->
                                             <select id="destino" name="destino" class="form-control input-lg" placeholder="Destino" required>
                                                 <option value="" disabled selected hidden>Destino</option>
-                                                <option value=1>Bogotá</option>
-                                                <option value=7>Brasília</option>
-                                                <option value=5>Buenos Aires</option>
-                                                <option value=9>Caracas</option>
-                                                <option value=10>La Paz</option>
-                                                <option value=3>Lima</option>
-                                                <option value=2>Quito</option>
-                                                <option value=6>Rio de Janeiro</option>
-                                                <option value=4>Santiago</option>
-                                                <option value=8>São Paulo</option>
+                                                <option value=0>Bogotá</option>
+                                                <option value=6>Brasília</option>
+                                                <option value=4>Buenos Aires</option>
+                                                <option value=8>Caracas</option>
+                                                <option value=9>La Paz</option>
+                                                <option value=2>Lima</option>
+                                                <option value=1>Quito</option>
+                                                <option value=5>Rio de Janeiro</option>
+                                                <option value=3>Santiago</option>
+                                                <option value=7>São Paulo</option>
                                             </select>
                                         </div>
                                     </div>
