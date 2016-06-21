@@ -35,7 +35,7 @@ public class CalculadorPonte {
         
         for (int linha = 0; linha < 10; linha++) {
             for (int coluna = 0; coluna < 10; coluna++) {
-                result = matriz[linha][coluna] + " <br> ";
+                result = result + matriz[linha][coluna] + " <br> ";
                 System.out.print(matriz[linha][coluna]);
             }
 
