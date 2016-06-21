@@ -14,6 +14,7 @@
     <body>
         Resultado ponte<br>
         <%
+            Object obj = request.getAttribute("response");
             out.print(request.getAttribute("response"));
             
         %>
