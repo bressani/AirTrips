@@ -1,125 +1,124 @@
 /***************************************************************************
-Inicio do Script de Criacao das Tabelas 
+inicio do script de criacao das tabelas 
 
-Tabela referente ao Ponte Aerea
+tabela referente ao ponte aerea
 ***************************************************************************/
 
-CREATE TABLE PONTE_AEREA (
-  ID_PONTE_AEREA INTEGER,
-  ID_AEROPORTO_ORIGEM INTEGER NULL,
-  ID_AEROPORTO_DESTINO INTEGER NULL,
-  DISTANCIA INTEGER NULL,
-  QTD_ESCALAS INTEGER NULL,
-  ID_AEROPORTO_ESCALA INTEGER 
+create table ponte_aerea(
+  id_ponte_aerea integer,
+  id_aeroporto_origem integer null,
+  id_aeroporto_destino integer null,
+  distancia integer null,
+  qtd_escalas integer null,
+  id_aeroporto_escala integer 
 );
 
 /***************************************************************************
-Tabela referente ao Usuario
+tabela referente ao usuario
 ***************************************************************************/
 
-CREATE TABLE USUARIO (
-  CPF VARCHAR(13),
-  RG VARCHAR(15) NULL,
-  NOME VARCHAR(100) NULL,
-  SEXO CHAR(1) NULL,
-  CEP VARCHAR(10) NULL,
-  ENDERECO VARCHAR(200) NULL,
-  TELEFONE VARCHAR(10) NULL,
-  CELULAR VARCHAR(11) NULL,
-  CIDADE VARCHAR(50) NULL,
-  ESTADO CHAR(2) NULL,
-  DATA_NASCIMENTO DATE NULL,
-  IDADE INTEGER UNSIGNED NULL,
-  NOME_PAI VARCHAR(100) NULL,
-  NOME_MAE VARCHAR(100) NULL  
+create table usuario (
+  cpf varchar(13),
+  rg varchar(15) null,
+  nome varchar(100) null,
+  sexo char(1) null,
+  cep varchar(10) null,
+  endereco varchar(200) null,
+  telefone varchar(10) null,
+  celular varchar(11) null,
+  cidade varchar(50) null,
+  estado char(2) null,
+  data_nascimento date null,
+  senha varchar(150) not null
 );
 
 /***************************************************************************
-Tabela referente ao Passageiro
+tabela referente ao passageiro
 ***************************************************************************/
 
-CREATE TABLE PASSAGEIRO (
-  idPASSAGEIRO INTEGER UNSIGNED,
-  CPF VARCHAR(13) NULL,
-  IDADE INTEGER UNSIGNED NULL,
-  SEXO CHAR(1) NULL,
-  NECESSIDADES_ESPECIAIS CHAR(1) NULL 
+create table passageiro (
+  idpassageiro integer unsigned,
+  cpf varchar(13) null,
+  idade integer unsigned null,
+  sexo char(1) null,
+  necessidades_especiais char(1) null 
 );
 
 /***************************************************************************
-Tabela referente ao Voo
+tabela referente ao voo
 ***************************************************************************/
 
-CREATE TABLE VOO (
-  ID_VOO VARCHAR(10) ,
-  COMPANHIA VARCHAR(30) NULL,
-  AERONAVE VARCHAR(30) NULL,
-  QTD_PESSOAS INTEGER UNSIGNED NULL  
+create table voo (
+  id_voo varchar(10) ,
+  companhia varchar(30) null,
+  aeronave varchar(30) null,
+  qtd_pessoas integer unsigned null  
 );
 
 /***************************************************************************
-Tabela referente ao Aeroporto 
+tabela referente ao aeroporto 
 ***************************************************************************/
 
-CREATE TABLE AEROPORTO (
-  ID_AEROPORTO INTEGER UNSIGNED,
-  ENDERECO VARCHAR(100) NULL,
-  CIDADE VARCHAR(50) NULL,
-  PAIS VARCHAR(50) NULL 
+create table aeroporto (
+  id_aeroporto integer unsigned,
+  endereco varchar(100) null,
+  cidade varchar(50) null,
+  pais varchar(50) null 
 );
 
 /***************************************************************************
-Tabela referente ao Venda
+tabela referente ao venda
 ***************************************************************************/
 
-CREATE TABLE VENDA (
-  ID_VENDA INTEGER,
-  ID_PONTE_AEREA INTEGER,
-  PASSAGEIRO_idPASSAGEIRO INTEGER UNSIGNED NOT NULL,
-  USUARIO_CPF VARCHAR(13) NOT NULL,
-  DATA_VENDA DATE NULL,
-  QTD_PASSAGENS INTEGER UNSIGNED NULL,
-  VALOR DOUBLE NULL
+create table venda (
+  id_venda integer,
+  id_ponte_aerea integer,
+  passageiro_idpassageiro integer unsigned not null,
+  usuario_cpf varchar(13) not null,
+  data_venda date null,
+  qtd_passagens integer unsigned null,
+  valor double null
 );
 
 /***************************************************************************
-Alter Table para adicionar as constraints
+alter table para adicionar as constraints
 ***************************************************************************/
 
--- Ponte Aerea	
-ALTER TABLE PONTE_AEREA ADD CONSTRAINT PRIMARY KEY(ID_PONTE_AEREA);
+-- ponte aerea	
+alter table ponte_aerea add constraint primary key(id_ponte_aerea);
 
--- Usuario
-ALTER TABLE USUARIO ADD CONSTRAINT PRIMARY KEY(CPF);
+-- usuario
+alter table usuario add constraint primary key(cpf);
 
 -- passageiro 
 
-ALTER TABLE PASSAGEIRO ADD CONSTRAINT PRIMARY KEY(idPASSAGEIRO);
+alter table passageiro add constraint primary key(idpassageiro);
 
 -- voo
-ALTER TABLE VOO ADD CONSTRAINT PRIMARY KEY(ID_VOO); 
+alter table voo add constraint primary key(id_voo); 
 
       
 -- aeroporto 
-ALTER TABLE AEROPORTO ADD CONSTRAINT PRIMARY KEY(ID_AEROPORTO);
+alter table aeroporto add constraint primary key(id_aeroporto);
   
 
 
--- Venda
-ALTER TABLE VENDA ADD CONSTRAINT Pk_venda
- PRIMARY KEY(ID_VENDA);
+-- venda
+alter table venda add constraint pk_venda
+ primary key(id_venda);
 
-ALTER TABLE VENDA ADD CONSTRAINT fk_venda_usuario FOREIGN KEY(USUARIO_CPF)
-    REFERENCES USUARIO(CPF);
+alter table venda add constraint fk_venda_usuario foreign key(usuario_cpf)
+    references usuario(cpf);
       
-ALTER TABLE VENDA ADD CONSTRAINT fk_venda_passageiro  FOREIGN KEY(PASSAGEIRO_idPASSAGEIRO)
-    REFERENCES PASSAGEIRO(idPASSAGEIRO);
+alter table venda add constraint fk_venda_passageiro  foreign key(passageiro_idpassageiro)
+    references passageiro(idpassageiro);
       
-ALTER TABLE VENDA ADD CONSTRAINT fk_venda_ponte FOREIGN KEY(ID_PONTE_AEREA)
-    REFERENCES PONTE_AEREA(ID_PONTE_AEREA);
+alter table venda add constraint fk_venda_ponte foreign key(id_ponte_aerea)
+    references ponte_aerea(id_ponte_aerea);
 /***************************************************************************
-Fim das Constraints
+fim das constraints
 
-Fim do Script 
+fim do script 
 ***************************************************************************/
+
 

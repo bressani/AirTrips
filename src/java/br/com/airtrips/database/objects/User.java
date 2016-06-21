@@ -6,7 +6,6 @@
 package br.com.airtrips.database.objects;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  *
@@ -28,6 +27,8 @@ public class User {
     private int idade;
     private String pai;
     private String mae;
+    private String senha;
+    
 
     public String getCpf() {
         return cpf;
@@ -139,6 +140,14 @@ public class User {
 
     public void setMae(String mae) {
         this.mae = mae;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     

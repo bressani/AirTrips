@@ -50,13 +50,12 @@
                     <h2>Cadastre-se <small>Airtrips.</small></h2>
                     <hr class="colorgraph">
                     <input type="hidden" name="acao" value="preenche" >
-                    <input type="hidden" name="service" value="UserHandler" >
                     <input type="hidden" name="classe" value="User" >     
                     <div class="form-group">
                         <input type="text" name="nome" id="last_name" class="form-control input-lg" placeholder="Nome completo" tabindex="2">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="login" id="display_name" class="form-control input-lg" placeholder="Login" tabindex="3">
+                        <input type="text" name="RG" id="display_name" class="form-control input-lg" placeholder="RG" tabindex="3">
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Endereço de e-mail" tabindex="4">
@@ -130,11 +129,14 @@
                     <div class="form-group">
                         <input type="text" name="telefone_contato" id="telefone_contato" class="form-control input-lg" placeholder="Telefone" tabindex="12">
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="celular" id="celular" class="form-control input-lg" placeholder="Celular" tabindex="13">
+                    </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Senha" tabindex="13">
+                                <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Senha" tabindex="14">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6">
@@ -143,30 +145,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <label class="col-xs-12 col-sm-6 col-md-6 control-label" for="newsletter">Deseja receber newsletter?</label>
-                        <label class="checkbox-inline" for="newsletter-0">
-                            <input type="checkbox" name="newsletter" id="newsletter-0" value="0">
-                            Sim
-                        </label>
-
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-xs-4 col-sm-3 col-md-3">
-                            <span class="button-checkbox">
-                                <button type="button" class="btn" data-color="info" tabindex="15"> Eu concordo</button>
-                                <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-                            </span>
-                        </div>
-                        <div class="col-xs-8 col-sm-9 col-md-9">
-                            Ao clicar em <strong class="label label-primary">Registrar</strong>, você concorda com os <a href="#" data-toggle="modal" data-target="#t_and_c_m">Termos e Condições</a> definidos pelo site, incluindo o uso de Cookies.
+                    <!-- Multiple Radios -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="radios">Sexo</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label for="radios-0">
+                                    <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                    Masculino
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label for="radios-1">
+                                    <input type="radio" name="radios" id="radios-1" value="2">
+                                    Feminino
+                                </label>
+                            </div>
                         </div>
                     </div>
 
                     <hr class="colorgraph">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6"><input type="submit" value="Registrar" class="btn btn-primary btn-block btn-lg" tabindex="16"></div>
+                        <div class="col-xs-12 col-md-6"><input type="submit" value="Registrar" class="btn btn-primary btn-block btn-lg" tabindex="15"></div>
                     </div>
                 </form>
             </div>

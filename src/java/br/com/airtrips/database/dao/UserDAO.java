@@ -25,13 +25,9 @@ public class UserDAO implements GenericDAO {
 
     @Override
     public void insert(Object object) throws SQLException {
-       
-
         User user = (User) object;
 
-        String sql = "INSERT INTO `usuario`(`CPF`, `RG`, `Nome`, `Sexo`, `CEP`, `Endereço`,"
-                + " `Telefone`, `Celular`, `cidade`, `Estado`, `Data_Nascimento`, `Idade`,"
-                + " `Nome Pai`, `Nome Mae`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO `usuario`(`cpf`, `rg`, `nome`, `sexo`, `cep`, `endereco`, `telefone`, `celular`, `cidade`, `estado`, `data_nascimento`, `senha`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement stm = con.prepareStatement(sql);
         stm.setString(1, user.getCpf());
         stm.setString(2, user.getRg());
@@ -46,9 +42,7 @@ public class UserDAO implements GenericDAO {
 
         java.sql.Date nascimentoSql = java.sql.Date.valueOf(user.getDatanascimento());
         stm.setDate(11, nascimentoSql);
-        stm.setInt(12, user.getIdade());
-        stm.setString(13, user.getPai());
-        stm.setString(14, user.getMae());
+        stm.setString(12, user.getSenha());
 
         stm.executeUpdate();
         stm.close();

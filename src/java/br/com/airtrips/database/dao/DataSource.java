@@ -10,7 +10,7 @@ public class DataSource {
     public DataSource() throws SQLException, ClassNotFoundException {
         String url = "jdbc:mysql://localhost:3306/airtrips";
         String user = "root";
-        String pass = "";
+        String pass = "#M666V#";
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection(url, user, pass);        
     }
