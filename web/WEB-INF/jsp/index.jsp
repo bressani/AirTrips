@@ -127,7 +127,9 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                            <form id="form1" role="form">             
+                            <form  action="${pageContext.request.contextPath}/redirect.htm?page=ponte-result" method="post"  role="form">  
+                                <input type="hidden" name="acao" value="calcula" >
+                                <input type="hidden" name="classe" value="PonteAerea" >   
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-6">
                                         <!--<br>Origem<br>-->
@@ -167,7 +169,7 @@
                                     </div>
 
                                 </div>
-                                <button type="button" class="btn btn-default btn-lg">
+                                <button type="submit" class="btn btn-default btn-lg">
                                     <span class="glyphicon glyphicon-plane" aria-hidden="true"></span> Procurar
                                 </button>
                             </form>

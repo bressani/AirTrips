@@ -5,10 +5,7 @@
  */
 package br.com.airtrips.Warshall;
 
-import br.com.airtrips.database.dao.PonteAereaDAO;
-import br.com.airtrips.database.objects.PonteAerea;
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  *
@@ -20,7 +17,6 @@ public class Algoritmo_Warshall {
  
 
     /**
-     * @param args the command line arguments
      * 
      */
     public static void AlgoritmoWharshall() throws SQLException, ClassNotFoundException {
