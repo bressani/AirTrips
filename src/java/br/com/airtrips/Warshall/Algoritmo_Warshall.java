@@ -17,38 +17,7 @@ import java.util.List;
 public class Algoritmo_Warshall {
     
     
-    public static int[][] CriaMatrizDistancias() throws SQLException, ClassNotFoundException{
-    PonteAereaDAO dao = new PonteAereaDAO();
-    int matriz[][] = {};   
-    List<PonteAerea> pa = dao.search(); // puxa lista de objetos do Banco de Dados
-       
-        while(!pa.isEmpty()){
-        // criando a matriz de distancias para utilizarmos para o calculo    
-          for(int i=0;i<pa.size();i++){              
-             matriz[pa.get(i).getID_AEROPORTO_ORIGEM()][pa.get(i).getID_AEROPORTO_DESTINO()] = pa.get(i).getDISTANCIA();
-             matriz[i][i]=0;
-            }
-          }
-           return matriz;
-    }
-     public static int[][] CriaArestas() throws SQLException, ClassNotFoundException{
-    PonteAereaDAO dao = new PonteAereaDAO();
-    int matriz[][] = {};   
-    List<PonteAerea> pa = dao.search(); // puxa lista de objetos do Banco de Dados
-       
-        while(!pa.isEmpty()){
-        // criando a matriz de distancias para utilizarmos para o calculo    
-          for(int i=0;i<pa.size();i++){    
-              
-             if(pa.get(i).getQTD_ESCALAS()!=0){  
-             matriz[pa.get(i).getID_AEROPORTO_ORIGEM()][pa.get(i).getID_AEROPORTO_ESCALA()] = 1; // identificar a escala
-             matriz[pa.get(i).getID_AEROPORTO_ESCALA()][pa.get(i).getID_AEROPORTO_DESTINO()] = pa.get(i).getDISTANCIA();
-             }
-             matriz[i][i]=0;
-            }
-          }
-           return matriz;
-    }
+ 
 
     /**
      * @param args the command line arguments
@@ -76,9 +45,7 @@ public class Algoritmo_Warshall {
         
         
         //matriz de ultimo vertcie alimentaca com percursos iniciais conhecidos.
-        int[][] mat_Pi = CriaMatrizDistancias();
-        
-        /*        
+        int[][] mat_Pi =               
         {{1, 2, 3, 0, 0, 0, 0, 8, 9, 0},
         {1, 2, 3, 0, 0, 0, 0, 0, 0, 0},
         {1, 2, 3, 4, 0, 0, 0, 0, 9, 10},
@@ -89,14 +56,13 @@ public class Algoritmo_Warshall {
         {1, 0, 0, 0, 5, 6, 7, 8, 9, 0},
         {1, 0, 3, 0, 0, 0, 0, 8, 9, 0},
         {0, 0, 3, 4, 5, 0, 0, 0, 0, 10}};
-         */
+         
         
         /*Como o projeto nao estipula uma distancia quando há ligação a distancia é 1
          quando não há ligação distancia é 0*/
         
-        int [][] arestas = CriaArestas();
-        
-        /*{{1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
+        int [][] arestas = 
+        {{1, 1, 1, 0, 0, 0, 0, 1, 1, 0},
         {1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
         {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
         {0, 0, 1, 1, 1, 0, 0, 0, 0, 1},
@@ -106,7 +72,7 @@ public class Algoritmo_Warshall {
         {1, 0, 0, 0, 1, 1, 1, 1, 1, 0},
         {1, 0, 1, 0, 0, 0, 0, 1, 1, 0},
         {0, 0, 1, 1, 1, 0, 0, 0, 0, 1}};
-        */
+        
 
         // Aplica 0 para loop e infinito para  caminhos desconhecidos.
         for (int linha = 0; linha < arestas.length; linha++) {
