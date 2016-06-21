@@ -4,6 +4,7 @@
     Author     : vini
 --%>
 
+<%@page import="br.com.airtrips.database.objects.Resultado"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,11 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        Resultado ponte<br>
-        <%
-            Object obj = request.getAttribute("response");
-            out.print(request.getAttribute("response"));
-            
-        %>
+      <div><p>${result}</p></div>
     </body>
 </html>

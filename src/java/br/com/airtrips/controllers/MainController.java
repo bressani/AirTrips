@@ -9,6 +9,7 @@ import br.com.airtrips.Warshall.CalculadorPonte;
 import br.com.airtrips.database.dao.PonteAereaDAO;
 import br.com.airtrips.database.dao.UserDAO;
 import br.com.airtrips.database.objects.PonteAerea;
+import br.com.airtrips.database.objects.Resultado;
 import br.com.airtrips.database.objects.User;
 import java.net.BindException;
 import java.time.LocalDate;
