@@ -19,7 +19,7 @@ public class Algoritmo_Warshall {
     /**
      * 
      */
-    public static void AlgoritmoWharshall(int origem, int destino)  {
+    public static String AlgoritmoWharshall(int origem, int destino)  {
 
         int numero = 10;
         // matrizes de distancia e ultimo vertice
@@ -137,23 +137,22 @@ public class Algoritmo_Warshall {
         int distancia=0;
         if(mat_D[origem][destino]==1){
             distancia =1;
-            System.out.println("voo sem escala");
-            System.out.println("distancia: "+distancia);
+           return "voo sem escala"+"/n"+
+            "distancia:"+distancia;
         }
         
          if(mat_D[origem][destino]==2){
              distancia =2;
-            System.out.println("escala: "+ mat_Pi[origem][destino]); 
-            System.out.println("distancia: "+distancia);
+            return "escala: "+ mat_Pi[origem][destino]+"/n" 
+            +"distancia: "+distancia;
         }
         
          if (mat_D[origem][destino]==3){
              distancia =3;
-            System.out.println("escala02: "+mat_Pi[origem][destino]);
-            
-             System.out.println("escala01: "+mat_Pi[destino][mat_Pi[origem][destino]]);
-             System.out.println("distancia: "+distancia);
+           return "escala02: "+mat_Pi[origem][destino]+"/n"+
+            "escala01: "+mat_Pi[destino][mat_Pi[origem][destino]]+"/n"+
+             "distancia: "+distancia;
             }
-
+         return "0";
 }
 }
